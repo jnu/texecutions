@@ -1,0 +1,5 @@
+*.pyc
+*.psd
+*.bak
+*.txt
+.DS_Store

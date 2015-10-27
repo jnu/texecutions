@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Texecutions</title>
+
+<link rel="stylesheet" href="deathrow.css"/>
+<script src="/js/libs/analyticstracking.js"></script>
+<script src="/sandbox/js/base64.min.js"></script>
+<script src="/sandbox/js/jquery2-latest.min.js"></script>
+<script src="/sandbox/js/davis.hash.min.js"></script>
+<script src="/sandbox/js/superscrollorama.min.js"></script>
+<script src="/sandbox/js/tweenmax.customease.js"></script>
+<script src="/sandbox/js/d3.v3.min.js"></script>
+<script src="/sandbox/js/crossfilter.min.js"></script>
+<script src="/sandbox/js/dc.min.js"></script>
+<script src="/sandbox/js/dc.cloud.js"></script>
+<script src="/sandbox/js/jquery.indicator.js"></script>
+<script src="deathrow.js"></script>
+
+<link rel="image_src" href="texasgrunge.png" />
+
+</head>
+
+<body>
+
+
+<div class="page" id="title" data-duration="1000">
+
+    <h1>Death in Texas</h1>
+</div>
+
+<div class="page" id="info" data-duration="1000">
+<div class='text-cont'>
+    <h2>About</h2>
+<h3>Death Row in Texas</h3>
+<p>
+On <a href="http://usnews.nbcnews.com/_news/2013/06/26/19152294-texas-carries-out-landmark-500th-execution?lite" target="_blank">June 26</a>, Texas executed its 500th inmate since reinstating the death penalty in 1982. Of these 500, there have been at least two cases of probable wrongful execution: <a href="http://www.newyorker.com/reporting/2009/09/07/090907fa_fact_grann" target="_blank">Cameron Todd Willingham</a> and <a href="http://www3.law.columbia.edu/hrlr/ltc/" target="_blank">Carlos DeLuna</a>.
+</p>
+
+<h3>Who are they?</h3>
+<p>
+Everyone on death row has been <a href="http://en.wikipedia.org/wiki/Capital_punishment_in_Texas#Capital_offenses" target="_blank"> convicted of murder</a>. Of these, <a href="#!/main/2/eyJhdmFpbGFibGUiOnRydWUsIm51bWJlclRhYmxlIjpbXSwiYWdlIjpbXSwicmFjZSI6W10sImdlbmRlciI6WyJGZW1hbGUiXSwiZWR1Y2F0aW9uIjpbXSwib2NjdXBhdGlvbiI6W10sInN0YXRlbWVudCI6W10sImRhdGFDb3VudCI6W10sImZ1bGxEYXRhVGFibGUiOltdfQ%3D%3D">just one, the 500th, was female</a>. Nearly half of those executed were <a href="#!/main/0/eyJhdmFpbGFibGUiOnRydWUsIm51bWJlclRhYmxlIjpbXSwiYWdlIjpbXSwicmFjZSI6WyJXaGl0ZSJdLCJnZW5kZXIiOltdLCJlZHVjYXRpb24iOltdLCJvY2N1cGF0aW9uIjpbXSwic3RhdGVtZW50IjpbXSwiZGF0YUNvdW50IjpbXSwiZnVsbERhdGFUYWJsZSI6W119">white</a>, just over a third were <a href="#!/main/0/eyJhdmFpbGFibGUiOnRydWUsIm51bWJlclRhYmxlIjpbXSwiYWdlIjpbXSwicmFjZSI6WyJCbGFjayJdLCJnZW5kZXIiOltdLCJlZHVjYXRpb24iOltdLCJvY2N1cGF0aW9uIjpbXSwic3RhdGVtZW50IjpbXSwiZGF0YUNvdW50IjpbXSwiZnVsbERhdGFUYWJsZSI6W119">black</a>, and the remaining sixth were <a href="#!/main/0/eyJhdmFpbGFibGUiOnRydWUsIm51bWJlclRhYmxlIjpbXSwiYWdlIjpbXSwicmFjZSI6WyJIaXNwYW5pYyJdLCJnZW5kZXIiOltdLCJlZHVjYXRpb24iOltdLCJvY2N1cGF0aW9uIjpbXSwic3RhdGVtZW50IjpbXSwiZGF0YUNvdW50IjpbXSwiZnVsbERhdGFUYWJsZSI6W119">hispanic</a>. The majority, about 60%, were <a href="#!/main/0/eyJhdmFpbGFibGUiOnRydWUsIm51bWJlclRhYmxlIjpbXSwiYWdlIjpbWy0yLjUsMy4yNzMxNzA3MzE3MDczMTczXV0sInJhY2UiOltdLCJnZW5kZXIiOltdLCJlZHVjYXRpb24iOltdLCJvY2N1cGF0aW9uIjpbXSwic3RhdGVtZW50IjpbXSwiZGF0YUNvdW50IjpbXSwiZnVsbERhdGFUYWJsZSI6W119">under the age of 30</a> when they were incarcerated. Nearly 3/4 of inmates <a href="#!/main/0/eyJhdmFpbGFibGUiOnRydWUsIm51bWJlclRhYmxlIjpbXSwiYWdlIjpbXSwicmFjZSI6W10sImdlbmRlciI6W10sImVkdWNhdGlvbiI6W1stMi4yMzY1ODUzNjU4NTM2NTgzLDUuMzM2NTg1MzY1ODUzNjU5XV0sIm9jY3VwYXRpb24iOltdLCJzdGF0ZW1lbnQiOltdLCJkYXRhQ291bnQiOltdLCJmdWxsRGF0YVRhYmxlIjpbXX0%3D">did not complete high school</a>, with half dropping out <a href="#!/main/0/eyJhdmFpbGFibGUiOnRydWUsIm51bWJlclRhYmxlIjpbXSwiYWdlIjpbXSwicmFjZSI6W10sImdlbmRlciI6W10sImVkdWNhdGlvbiI6W1stMi4yMzY1ODUzNjU4NTM2NTgzLDQuNDM2NTg1MzY1ODUzNjU4NV1dLCJvY2N1cGF0aW9uIjpbXSwic3RhdGVtZW50IjpbXSwiZGF0YUNvdW50IjpbXSwiZnVsbERhdGFUYWJsZSI6W119">before the 11th grade</a>.
+</p>
+
+<h3>Last Words</h3>
+<p>
+Texas has published the last statements made by their inmates before execution. Some inmates recite Bible verses or poetry, others <a href="#!/main/1/eyJhdmFpbGFibGUiOm51bGwsInN0YXRlbWVudCI6WyJhcG9sb2ciLCJzb3JyeSIsInJlZ3JldCJdfQ%3D%3D">apologize</a> to the victim's family, and still others give a last-moment prayer to the <a href="#!/main/1/eyJhdmFpbGFibGUiOm51bGwsInN0YXRlbWVudCI6WyJjb3dib3lzIl19">Cowboys</a>. A few inmates take this time <a href="#!/main/1/eyJhdmFpbGFibGUiOm51bGwsInN0YXRlbWVudCI6WyJpbm5vY2VudCIsImlubm9jZW5jZSJdfQ%3D%3D">to protest their conviction</a>, but many use it to express thoughts of <a href="#!/main/1/eyJhdmFpbGFibGUiOnRydWUsIm51bWJlclRhYmxlIjpbXSwiYWdlIjpbXSwicmFjZSI6W10sImdlbmRlciI6W10sImVkdWNhdGlvbiI6W10sIm9jY3VwYXRpb24iOltdLCJzdGF0ZW1lbnQiOlsibG92ZSIsImhvcGUiLCJoZWFydCIsImxpZmUiXX0%3D">love and thankfulness</a>. <a href="#!/main/1/eyJhdmFpbGFibGUiOnRydWUsIm51bWJlclRhYmxlIjpbXSwiYWdlIjpbXSwicmFjZSI6W10sImdlbmRlciI6W10sImVkdWNhdGlvbiI6W10sIm9jY3VwYXRpb24iOltdLCJzdGF0ZW1lbnQiOlsiR29kIiwiTG9yZCIsIkplc3VzIiwiSGVhdmVuIl19">God and Allah</a> are also frequently referenced. The more disconcerting of them are from prisoners who do not seem fully aware of what's happening, that they would have an opportunity to speak, or that there would be an audience, for example <a href="#!/main/1/eyJhdmFpbGFibGUiOm51bGwsInN0YXRlbWVudCI6WyJob3dkeSJdfQ%3D%3D">prisoner 999095</a>. By far the most uncomfortable to read are those whose final words continue through the moment a lethal cocktail of chemicals is injected into their veins and <a href="#!/main/1/eyJhdmFpbGFibGUiOm51bGwsInN0YXRlbWVudCI6WyJzdGluZyIsInRhc3RlIl19">they comment on its sting, and even taste</a>.
+</p>
+
+</div>
+</div>
+
+
+
+<div id="controls">
+    <div id="avail"
+        class="btn-group"
+        data-toggle="buttons-radio"
+        data-dimension="available">
+        <button type="button"
+                class="btn btn-primary btn-small active"
+                data-filter="true">
+            Only Inmates with Bios
+        </button>
+        <button type="button"
+                class="btn btn-primary btn-small"
+                data-filter="null">
+            All Inmates
+        </button>
+    </div>
+
+    <div id="dataCount"
+        class="chart dc-data-count"
+        data-dimension="all"
+        data-group="all"
+        data-type="dataCount">
+        <span class="filter-count"></span>
+        selected out of 
+        <span class="total-count"></span> 
+        records
+    </div>
+
+    <div id="current-filters"></div>
+</div>
+
+
+
+<div class="page slide" id="main" data-duration="6000">
+
+    <div class="subpage one" id="demographics"><div>
+        <h2>
+            <a class="permalink">
+            <i class="icon-lock"></i>
+            Demographics
+            </a>
+        </h2>
+
+        <div class="dash">
+            <div class="chart"
+                id="age"
+                data-type="barChart"
+                data-group="age"
+                data-dimension="age"
+                data-title="Age of Incarceration"></div>
+
+            <div class="right" id="pieCont">
+            <div class="chart left"
+                id="race"
+                data-type="pieChart"
+                data-group="race"
+                data-dimension="race"
+                data-title="Race"></div>
+
+
+            <div class="chart right"
+                id="gender"
+                data-type="pieChart"
+                data-group="gender"
+                data-dimension="gender"
+                data-title="Gender"></div>
+            </div>
+
+
+            <div class="chart"
+                id="education"
+                data-type="barChart"
+                data-group="education"
+                data-dimension="education"
+                data-title="Highest Education Level (grade)"></div>
+
+
+            <div class="chart right"
+                id="occupation"
+                data-type="wordCloud"
+                data-group="occupation"
+                data-dimension="occupation"
+                data-title="Occupation"></div>
+
+        </div>
+    </div></div>
+
+
+    <div class="subpage two" id="Last Words"><div>
+        <h2>
+            <a class="permalink">
+            <i class="icon-lock"></i>
+            Last Words
+            </a>
+        </h2>
+
+        <div class="chart"
+            id="statement"
+            data-type="wordCloud"
+            data-group="statement"
+            data-dimension="statement"
+            data-title="Last Statement"></div>
+
+        <div class="chart table table-striped right"
+            id="numberTable"
+            data-type="dataTable"
+            data-group="prisonerData"
+            data-dimension="prisoner"
+            data-title="Full Statements">
+            <div class="header">
+                <span>Prisoner #</span>
+                <span>Date of Execution</span>
+                <span>Last Words</span>
+                <span>Sentiment</span>
+            </div>
+        </div>
+
+        <div class="stats right" id="sentAvg">
+            <span class="label">Average sentiment: </span>
+            <span class="avg">Unknown</span>
+            <div id="indicator"></div>
+        </div>
+
+    </div></div>
+
+
+    <div class="subpage three" id="sentiment"><div>
+        <h2>
+            <a class="permalink">
+            <i class="icon-lock"></i>
+            Prisoners
+            </a>
+        </h2>
+
+        <div class="chart table table-striped left"
+            id="fullDataTable"
+            data-type="dataTable"
+            data-group="prisonerData"
+            data-dimension="prisoner"
+            data-title="Prisoner Information">
+            <div class="header">
+                <span>Prisoner #</span>
+                <span>First Name</span>
+                <span>Last Name</span>
+                <span>Race</span>
+                <span>Gender</span>
+                <span>Education</span>
+                <span>Occupation</span>
+                <span>Age of Incarceration</span>
+                <span>Age of Execution</span>
+            </div>
+        </div>
+    </div></div>
+
+</div>
+
+
+
+
+<div class="page" id="end" data-duration="2000">
+
+    <h1>End.</h1>
+
+</div>
+
+
+<div class="page" id="credits" data-duration="1000">
+<div class='text-cont'>
+<h2>Credits</h2>
+<p>
+Data visualization done with Mike Bostock's <a href="http://d3js.org">d3.js</a> and <a href="https://github.com/square/crossfilter">crossfilter.js</a>, with Nick Zhu's <a href="http://nickqizhu.github.io/dc.js/">dc.js</a>, Jason Davies' <a href="https://github.com/jasondavies/d3-cloud">d3-cloud</a>.
+</p>
+
+<p>
+All of the raw data comes from the <a href="http://www.tdcj.state.tx.us/death_row/dr_executed_offenders.html">Texas Department of Criminal Justice</a>. My databases reflect their site as of July 2013. You can download the tidied-up data used on this page <a href="deathrow.csv">here</a>, or the raw scrape (including mugshots) <a href="bios.csv">here</a>. Note that only 119 of the 500 entries have digitized bios as I'm writing this.
+</p>
+
+<p>
+I'm trying to address bugs and performance issues in my spare time. If you notice anything glaringly obvious that needs fixing, <a href="//joenoodles.com/contact">be in touch</a>.
+</p>
+
+<p>
+I wrote <a href="//joenoodles.com/2013/7/texecutions">a blog post</a> about some of the coding that went into this project.
+</p>
+
+<p>
+Designed &amp; coded by Joe Nudell in 2013. See <a href="//joenoodles.com/">his blog</a> for more projects similar (and dissimilar) to this one.
+</p>
+
+</div>
+</div>
+
+
+<div id="warning">
+    <i class='icon-exclamation-sign icon-white'></i>This page was designed for larger windows. Expand your browser to get the full experience.
+</div>
+
+<div id="loadMode">
+<div>
+Loading ...
+</div>
+</div>
+
+</body>
+</html>
